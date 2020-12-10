@@ -10,13 +10,13 @@ pipeline {
 	    }
     }
 	stage('Second') {
-	    steps {
-	    	when{
-			${EXECUTE} equals "True"
-		}
+	    when{
+		equals ${EXECUTE}:"True"
+	    }
+	    steps{
 		script{
-			sh 'echo "Updating Second Stage"'
-		}
+                	sh 'echo "Updating Second Stage"'
+                }
 	    }
 	} 
 	stage('Third') {

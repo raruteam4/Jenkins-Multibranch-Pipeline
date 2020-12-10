@@ -12,7 +12,7 @@ pipeline {
 	stage('Second') {
 	    steps {
 	    	when{
-			equals ${EXECUTE}: "True"
+			${EXECUTE} equals "True"
 		}
 		script{
 			sh 'echo "Updating Second Stage"'

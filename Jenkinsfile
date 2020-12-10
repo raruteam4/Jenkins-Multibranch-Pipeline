@@ -11,7 +11,9 @@ pipeline {
     }
 	stage('Second') {
 	    when{
-		equals ${EXECUTE}:"True"
+		expression{
+			return ${EXECUTE}='True'
+		}
 	    }
 	    steps{
 		script{

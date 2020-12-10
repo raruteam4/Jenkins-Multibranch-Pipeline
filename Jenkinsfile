@@ -6,13 +6,14 @@ pipeline {
 	    steps {
 		script{
 			env.EXECUTE="True"
+			sh 'echo "variable asignada"'
 		}
 	    }
     }
 	stage('Second') {
 	    when{
 		expression{
-		   return EXECUTE="True"
+		    EXECUTE="True"
 		}
 	    }
 	    steps{

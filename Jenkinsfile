@@ -23,6 +23,11 @@ pipeline {
 	    }
 	} 
 	stage('Third') {
+	    when{
+	        expression{
+		    EXECUTE=="True"
+		}
+	    }
 	    steps {
 		sh 'echo "Step Three"'
 	    }

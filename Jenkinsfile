@@ -12,7 +12,7 @@ pipeline {
 	stage('Second') {
 	    when{
 		expression{
-			return ${EXECUTE}='True'
+			${EXECUTE}="True"
 		}
 	    }
 	    steps{

@@ -5,7 +5,7 @@ pipeline {
         stage('First') {
 	    steps {
 		script{
-			env.EXECUTE="False"
+			env.EXECUTE="True"
 			sh 'echo "variable asignada como: " ${EXECUTE}'
 		}
 	    }
